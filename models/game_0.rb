@@ -6,20 +6,20 @@ class Game
     @hand_2 = hand_2
   end
 
-  # def set()
+  def set()
     # game_set= [@hand_1, @hand_2]??
-      # game_set.each {|hand_1, hand_2| hand_1 <==> hand_2 }??
-      # return "rock wins" if @hand_1 == "rock" && @hand_2 == "rock"
-      # return "#{@hand_1} wins" if @hand_1 == "rock" &&  @hand_2 == "scissors"
-      # return "#{@hand_2} wins" if @hand_1 == "scissors" &&  @hand_2 == "rock"
-  #     return "#{@hand_2} wins" if @hand_1 == "rock" && @hand_2 == "paper"
-  #     return "#{@hand_1} wins" if @hand_1 == "paper" && @hand_2 == "rock"
-  #     return "#{@hand_1} wins" if @hand_1 == "scissors" && @hand_2 == "paper"
-  #     return "#{@hand_2} wins" if @hand_1 == "paper" && @hand_2 == "scissors"
-  #     return "scissors wins" if @hand_1 == "scissors" && @hand_2 == "scissors"
-  #     return "paper wins" if @hand_1 == "paper" && @hand_2 == "paper"
-  #   # game_set.each {|hand| p "#{hand wins}" if hand == "rock"}??
-  # end
+    #   game_set.each {|hand_1, hand_2| hand_1 <==> hand_2 }??
+      return "rock wins" if @hand_1 == "rock" && @hand_2 == "rock"
+      return "#{@hand_1} wins" if @hand_1 == "rock" &&  @hand_2 == "scissors"
+      return "#{@hand_2} wins" if @hand_1 == "scissors" &&  @hand_2 == "rock"
+      return "#{@hand_2} wins" if @hand_1 == "rock" && @hand_2 == "paper"
+      return "#{@hand_1} wins" if @hand_1 == "paper" && @hand_2 == "rock"
+      return "#{@hand_1} wins" if @hand_1 == "scissors" && @hand_2 == "paper"
+      return "#{@hand_2} wins" if @hand_1 == "paper" && @hand_2 == "scissors"
+      return "scissors wins" if @hand_1 == "scissors" && @hand_2 == "scissors"
+      return "paper wins" if @hand_1 == "paper" && @hand_2 == "paper"
+    # game_set.each {|hand| p "#{hand wins}" if hand == "rock"}??
+  end
   #
   # def set()
   #   wins = {
@@ -40,26 +40,25 @@ class Game
   #
   #   end
 
-    def set()
-      wins = {
-        "scissors" => "paper",
-        "rock" => "scissors",
-        "paper" => "rock"
-        }
-      game_set= { @hand_1 => @hand_2 }
-      wins.each do
-        if game_set[0] == wins[0..2]
-          return "#{@hand_1} wins"
-        elsif game_set[0] == wins[0..2].invert.map
-          return "#{@hand_2} wins"
-        else
-          return "both hands are the same. play again"
-        end
-      end
+    # def set()
+    #   wins = {
+    #     "scissors" => "paper",
+    #     "rock" => "scissors",
+    #     "paper" => "rock"
+    #     }
+    #   game_set= { @hand_1 => @hand_2 }
+    #   wins.each do
+    #     if game_set[0] == wins[0..2]
+    #       return "#{@hand_1} wins"
+    #     elsif game_set[0] == wins[0..2].invert.map
+    #       return "#{@hand_2} wins"
+    #     else
+    #       return "both hands are the same. play again"
+    #     end
+    #   end
+    #
 
 
-
-  end
 
 
 
