@@ -1,9 +1,10 @@
 require 'sinatra'
 require 'sinatra/reloader'
-require_relative './models/game_0.rb'
+require_relative './models/game.rb'
 
 get '/game/:hand_1/:hand_2' do
-  @game_result = Game.new(params[:hand_1], params[:hand_2]).set
+  game = Game.new(params[:hand_1], params[:hand_2])
+  @game_result = game.set
   erb( :result)
 end
 
@@ -16,3 +17,12 @@ get '/game/welcome' do
   # end
   erb( :welcome)
 end
+
+
+=begin
+```get '/' do
+  erb :index, :layout => :post
+end
+```
+=end
+#This will render views/index.erb embedded in the views/post.erb (default is views/layout.erb, if it exists).
